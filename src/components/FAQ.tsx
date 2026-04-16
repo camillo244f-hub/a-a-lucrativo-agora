@@ -31,33 +31,33 @@ const FAQS = [
 export function FAQ() {
   const [open, setOpen] = useState<number | null>(0);
   return (
-    <section className="py-20 px-4">
-      <div className="mx-auto max-w-3xl">
-        <h2 className="text-center text-4xl md:text-5xl mb-3">
+    <section className="py-14 sm:py-20 px-4">
+      <div className="mx-auto max-w-2xl">
+        <h2 className="text-center text-2xl sm:text-4xl md:text-5xl mb-3 font-display">
           Perguntas <span className="text-gradient-gold">frequentes</span>
         </h2>
-        <p className="text-center text-muted-foreground mb-10">
+        <p className="text-center text-muted-foreground text-sm sm:text-base mb-8 sm:mb-10">
           Tire suas dúvidas antes de começar
         </p>
-        <div className="space-y-3">
+        <div className="space-y-2.5">
           {FAQS.map((item, i) => (
             <div
               key={i}
-              className="rounded-2xl bg-card border border-border overflow-hidden shadow-card"
+              className="rounded-xl bg-card border border-border overflow-hidden"
             >
               <button
                 onClick={() => setOpen(open === i ? null : i)}
-                className="w-full flex items-center justify-between gap-4 px-6 py-5 text-left font-semibold text-base md:text-lg hover:bg-muted/40 transition-colors"
+                className="w-full flex items-center justify-between gap-4 px-5 sm:px-6 py-4 text-left font-semibold text-sm sm:text-base hover:bg-muted/40 transition-colors"
               >
                 <span>{item.q}</span>
                 <ChevronDown
-                  className={`h-5 w-5 shrink-0 transition-transform ${
-                    open === i ? "rotate-180 text-success" : "text-muted-foreground"
+                  className={`h-4 w-4 shrink-0 transition-transform ${
+                    open === i ? "rotate-180 text-foreground" : "text-muted-foreground"
                   }`}
                 />
               </button>
               {open === i && (
-                <div className="px-6 pb-5 text-muted-foreground leading-relaxed">
+                <div className="px-5 sm:px-6 pb-5 text-sm text-muted-foreground leading-relaxed">
                   {item.a}
                 </div>
               )}
