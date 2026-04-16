@@ -18,56 +18,51 @@ function Index() {
         🔥 OFERTA RELÂMPAGO — Acesso por apenas R$ 9,90 · Vagas liberadas hoje
       </div>
 
-      {/* HERO */}
-      <section className="relative bg-gradient-hero pt-12 pb-16 md:pt-20 md:pb-24 px-4">
+      {/* HERO com Vídeo no topo */}
+      <section className="relative bg-gradient-hero pt-10 pb-14 md:pt-16 md:pb-20 px-4">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,oklch(0.55_0.22_305/0.4),transparent_50%)]" />
-        <div className="relative mx-auto max-w-6xl grid lg:grid-cols-[1.2fr_1fr] gap-10 lg:gap-16 items-center">
-          <div className="text-center lg:text-left animate-float-up">
-            <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-success/15 border border-success/30 text-success text-xs font-bold uppercase tracking-widest mb-6">
+        <div className="relative mx-auto max-w-4xl">
+          <div className="text-center animate-float-up mb-6 md:mb-8">
+            <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-success/15 border border-success/30 text-success text-[10px] sm:text-xs font-bold uppercase tracking-widest mb-4 sm:mb-5">
               <Zap className="h-3.5 w-3.5" /> Método validado · +1.000 alunos
             </span>
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl mb-5 leading-[1.02]">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-3 sm:mb-4 leading-[1.05]">
               Fature com{" "}
               <span className="text-gradient-gold">Açaí na Garrafa</span>{" "}
               começando com apenas{" "}
               <span className="text-success">R$ 9,90</span>
             </h1>
-            <p className="text-base md:text-xl text-muted-foreground max-w-2xl mx-auto lg:mx-0 mb-8 leading-relaxed">
+            <p className="text-sm sm:text-base md:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed px-2">
               Aprenda a criar seu próprio negócio e lucrar mais de{" "}
-              <strong className="text-foreground">R$ 200 por dia</strong> de forma simples — mesmo
-              começando do zero, sem experiência e sem precisar sair de casa.
-            </p>
-
-            <a
-              href={LINK_BASIC}
-              className="inline-block w-full sm:w-auto bg-gradient-cta text-success-foreground font-black py-5 px-8 sm:px-12 rounded-2xl text-lg md:text-xl shadow-cta animate-pulse-cta transition hover:scale-[1.02]"
-            >
-              COMEÇAR AGORA POR R$ 9,90 →
-            </a>
-            <p className="mt-4 text-sm text-muted-foreground flex items-center gap-2 justify-center lg:justify-start">
-              <ShieldCheck className="h-4 w-4 text-success" />
-              Acesso imediato + garantia de satisfação
+              <strong className="text-foreground">R$ 200 por dia</strong> — mesmo começando do zero.
             </p>
           </div>
 
-          <div className="relative animate-float-up">
-            <div className="absolute -inset-6 bg-gradient-purple opacity-40 blur-3xl rounded-full" />
-            <img
-              src={heroImg}
-              alt="Açaí na garrafa pronto para vender"
-              width={1024}
-              height={1024}
-              className="relative w-full max-w-md mx-auto rounded-3xl shadow-glow border border-border"
-            />
-            <div className="absolute -bottom-4 -left-4 sm:-left-8 bg-card border border-border rounded-2xl px-4 py-3 shadow-card flex items-center gap-3">
-              <div className="h-10 w-10 rounded-full bg-success/20 flex items-center justify-center">
-                <DollarSign className="h-5 w-5 text-success" />
-              </div>
-              <div>
-                <p className="text-xs text-muted-foreground">Faturamento médio</p>
-                <p className="text-base font-black">R$ 200+/dia</p>
-              </div>
+          {/* Vídeo */}
+          <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-glow border border-border bg-card animate-float-up">
+            <div className="aspect-video">
+              <iframe
+                src={VSL_URL}
+                title="Vídeo de apresentação Açaí na Garrafa"
+                allow="autoplay; encrypted-media"
+                allowFullScreen
+                className="w-full h-full"
+              />
             </div>
+          </div>
+
+          {/* CTA abaixo do vídeo */}
+          <div className="text-center mt-6 sm:mt-8">
+            <a
+              href={LINK_BASIC}
+              className="inline-block w-full sm:w-auto bg-gradient-cta text-success-foreground font-black py-4 sm:py-5 px-6 sm:px-12 rounded-2xl text-base sm:text-lg md:text-xl shadow-cta animate-pulse-cta transition hover:scale-[1.02]"
+            >
+              COMEÇAR AGORA POR R$ 9,90 →
+            </a>
+            <p className="mt-3 sm:mt-4 text-xs sm:text-sm text-muted-foreground flex items-center gap-2 justify-center">
+              <ShieldCheck className="h-4 w-4 text-success" />
+              Acesso imediato + garantia de satisfação
+            </p>
           </div>
         </div>
       </section>
