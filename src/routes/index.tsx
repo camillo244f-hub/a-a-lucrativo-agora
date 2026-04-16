@@ -3,6 +3,7 @@ import { Check, ShieldCheck, Zap, TrendingUp, Clock, DollarSign, X } from "lucid
 import { ProvasSociais } from "@/components/ProvasSociais";
 import { Planos, LINK_BASIC, LINK_FULL } from "@/components/Planos";
 import { FAQ } from "@/components/FAQ";
+import { VSLPlayer } from "@/components/VSLPlayer";
 
 export const Route = createFileRoute("/")({
   component: Index,
