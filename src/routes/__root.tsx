@@ -36,13 +36,17 @@ export const Route = createRootRoute({
           "Aprenda a montar seu próprio negócio de Açaí na Garrafa do zero. Curso completo + bônus a partir de R$ 9,90. Acesso imediato.",
       },
       { name: "author", content: "Açaí na Garrafa Lucrativo" },
-      { property: "og:title", content: "Açaí na Garrafa Lucrativo — Comece com R$ 9,90" },
+      { property: "og:title", content: "Açaí na Garrafa Lucrativo — Comece com R$ 9,90 e fature R$200/dia" },
       {
         property: "og:description",
         content: "Fature mais de R$200/dia com Açaí na Garrafa. Método simples, sem experiência e sem CNPJ.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Açaí na Garrafa Lucrativo — Comece com R$ 9,90 e fature R$200/dia" },
+      { name: "description", content: "Açaí Lucrativo Agora is a sales page for a digital product teaching how to start a profitable açaí business." },
+      { property: "og:description", content: "Açaí Lucrativo Agora is a sales page for a digital product teaching how to start a profitable açaí business." },
+      { name: "twitter:description", content: "Açaí Lucrativo Agora is a sales page for a digital product teaching how to start a profitable açaí business." },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
