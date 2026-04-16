@@ -32,29 +32,29 @@ export function ProvasSociais() {
   }, [emblaApi]);
 
   return (
-    <section className="py-14 sm:py-20 px-4">
+    <section className="px-4 py-14 sm:py-20 bg-muted/40">
       <div className="mx-auto max-w-6xl">
         <div className="text-center mb-8 sm:mb-10">
-          <p className="text-success text-[11px] sm:text-xs font-bold uppercase tracking-widest mb-3">
-            Resultados reais
+          <p className="text-[11px] uppercase tracking-widest text-muted-foreground mb-3 font-semibold">
+            Histórias reais
           </p>
-          <h2 className="text-2xl sm:text-4xl md:text-5xl mb-3 font-display">
-            Quem já está <span className="text-gradient-gold">lucrando</span>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl mb-3 text-balance">
+            Resultados de quem aplicou o método
           </h2>
-          <p className="text-muted-foreground text-sm sm:text-base">
-            Prints reais da nossa comunidade de alunos
+          <p className="text-muted-foreground text-sm sm:text-base max-w-md mx-auto">
+            Prints reais enviados pela nossa comunidade de alunos.
           </p>
         </div>
 
         <div className="relative">
           <div className="overflow-hidden" ref={emblaRef}>
-            <div className="flex gap-5">
+            <div className="flex gap-4 sm:gap-5">
               {provas.map((p, i) => (
                 <div
                   key={i}
-                  className="shrink-0 grow-0 basis-[85%] sm:basis-[55%] md:basis-[40%] lg:basis-[32%]"
+                  className="shrink-0 grow-0 basis-[80%] sm:basis-[55%] md:basis-[40%] lg:basis-[32%]"
                 >
-                  <div className="rounded-2xl overflow-hidden bg-card border border-border shadow-card hover:shadow-glow transition-shadow">
+                  <div className="rounded-xl overflow-hidden bg-card border border-border shadow-card">
                     <img
                       src={p.src}
                       alt={p.alt}
@@ -71,17 +71,17 @@ export function ProvasSociais() {
             onClick={() => emblaApi?.scrollPrev()}
             disabled={!canPrev}
             aria-label="Anterior"
-            className="absolute -left-2 md:-left-5 top-1/2 -translate-y-1/2 h-12 w-12 rounded-full bg-card border border-border flex items-center justify-center shadow-card hover:bg-primary hover:text-primary-foreground transition disabled:opacity-40"
+            className="hidden sm:flex absolute -left-3 md:-left-5 top-1/2 -translate-y-1/2 h-10 w-10 rounded-full bg-card border border-border items-center justify-center shadow-card hover:bg-muted transition disabled:opacity-30"
           >
-            <ChevronLeft className="h-5 w-5" />
+            <ChevronLeft className="h-4 w-4" />
           </button>
           <button
             onClick={() => emblaApi?.scrollNext()}
             disabled={!canNext}
             aria-label="Próximo"
-            className="absolute -right-2 md:-right-5 top-1/2 -translate-y-1/2 h-12 w-12 rounded-full bg-card border border-border flex items-center justify-center shadow-card hover:bg-primary hover:text-primary-foreground transition disabled:opacity-40"
+            className="hidden sm:flex absolute -right-3 md:-right-5 top-1/2 -translate-y-1/2 h-10 w-10 rounded-full bg-card border border-border items-center justify-center shadow-card hover:bg-muted transition disabled:opacity-30"
           >
-            <ChevronRight className="h-5 w-5" />
+            <ChevronRight className="h-4 w-4" />
           </button>
         </div>
       </div>

@@ -23,9 +23,9 @@ export function StickyMobileCTA({ onClick }: StickyMobileCTAProps) {
     >
       <button
         onClick={onClick}
-        className="w-full bg-gradient-cta text-success-foreground font-bold py-3.5 rounded-xl text-sm shadow-cta active:scale-[0.98] transition"
+        className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold py-3.5 rounded-lg text-sm transition active:scale-[0.99]"
       >
-        Começar por R$ 9,90 →
+        Começar por R$ 9,90
       </button>
     </div>
   );

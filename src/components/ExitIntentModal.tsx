@@ -1,4 +1,4 @@
-import { Gift, X, Clock } from "lucide-react";
+import { X, Clock } from "lucide-react";
 import { useEffect, useState } from "react";
 
 interface ExitIntentModalProps {
@@ -8,9 +8,8 @@ interface ExitIntentModalProps {
 export function ExitIntentModal({ basicLink }: ExitIntentModalProps) {
   const [open, setOpen] = useState(false);
   const [shown, setShown] = useState(false);
-  const [timeLeft, setTimeLeft] = useState(300); // 5 min
+  const [timeLeft, setTimeLeft] = useState(300);
 
-  // Trigger: desktop mouseleave OR mobile after 25s OR scroll up fast
   useEffect(() => {
     if (shown) return;
     if (typeof window === "undefined") return;
@@ -53,7 +52,6 @@ export function ExitIntentModal({ basicLink }: ExitIntentModalProps) {
     };
   }, [shown]);
 
-  // Countdown
   useEffect(() => {
     if (!open) return;
     const id = setInterval(() => setTimeLeft((t) => (t > 0 ? t - 1 : 0)), 1000);
@@ -76,44 +74,41 @@ export function ExitIntentModal({ basicLink }: ExitIntentModalProps) {
 
   return (
     <div
-      className="fixed inset-0 z-[100] flex items-end sm:items-center justify-center bg-black/85 backdrop-blur-sm animate-fade-in p-0 sm:p-4"
+      className="fixed inset-0 z-[100] flex items-end sm:items-center justify-center bg-foreground/40 backdrop-blur-sm animate-fade-in p-0 sm:p-4"
       onClick={() => setOpen(false)}
       role="dialog"
       aria-modal="true"
     >
       <div
-        className="relative w-full sm:max-w-md bg-gradient-gold p-[2px] rounded-t-3xl sm:rounded-3xl shadow-glow animate-scale-in"
+        className="relative w-full sm:max-w-md bg-card rounded-t-2xl sm:rounded-2xl shadow-elevated animate-scale-in border border-border"
         onClick={(e) => e.stopPropagation()}
       >
-        <div className="rounded-t-[calc(1.5rem-2px)] sm:rounded-[calc(1.5rem-2px)] bg-card p-6 sm:p-8 text-center">
-          <button
-            onClick={() => setOpen(false)}
-            aria-label="Fechar"
-            className="absolute top-3 right-3 h-9 w-9 rounded-full bg-background/60 hover:bg-background flex items-center justify-center transition z-10"
-          >
-            <X className="h-4 w-4" />
-          </button>
+        <button
+          onClick={() => setOpen(false)}
+          aria-label="Fechar"
+          className="absolute top-3 right-3 h-8 w-8 rounded-full bg-muted hover:bg-border flex items-center justify-center transition z-10"
+        >
+          <X className="h-4 w-4 text-muted-foreground" />
+        </button>
 
-          <div className="inline-flex items-center justify-center h-16 w-16 rounded-full bg-gradient-gold mb-4 shadow-card">
-            <Gift className="h-8 w-8 text-secondary" />
-          </div>
-
-          <h2 className="text-2xl sm:text-3xl mb-2 leading-tight">
-            ESPERA! Não vá embora
-            <br />
-            <span className="text-gradient-gold">de mãos vazias</span>
-          </h2>
-          <p className="text-sm text-muted-foreground mb-5">
-            Liberei pra você uma <strong className="text-foreground">última chance</strong> de começar
-            por apenas <strong className="text-success">R$ 9,90</strong>.
+        <div className="p-6 sm:p-8 text-center">
+          <p className="text-[11px] uppercase tracking-widest text-primary font-semibold mb-3">
+            Espera
           </p>
 
-          <div className="bg-background/50 border border-border rounded-2xl py-3 px-4 mb-5">
-            <div className="flex items-center justify-center gap-2 text-xs uppercase tracking-widest text-muted-foreground mb-1">
-              <Clock className="h-3.5 w-3.5 text-destructive" />
+          <h2 className="text-2xl sm:text-[1.65rem] font-display font-medium leading-tight tracking-tight mb-3 text-balance">
+            Antes de sair, garanta seu acesso por R$ 9,90
+          </h2>
+          <p className="text-sm text-muted-foreground mb-6">
+            Esta é a última chance de começar com o valor promocional.
+          </p>
+
+          <div className="bg-muted/60 border border-border rounded-xl py-4 mb-6">
+            <div className="flex items-center justify-center gap-2 text-[10px] uppercase tracking-widest text-muted-foreground mb-1 font-semibold">
+              <Clock className="h-3 w-3" />
               Oferta expira em
             </div>
-            <div className="text-3xl font-black text-destructive tabular-nums tracking-tight">
+            <div className="text-3xl font-display font-semibold text-foreground tabular-nums tracking-tight">
               {mm}:{ss}
             </div>
           </div>
@@ -121,13 +116,13 @@ export function ExitIntentModal({ basicLink }: ExitIntentModalProps) {
           <a
             href={basicLink}
             onClick={() => setOpen(false)}
-            className="block w-full text-center bg-gradient-cta text-success-foreground font-black py-4 rounded-2xl text-base shadow-cta animate-pulse-cta"
+            className="block w-full text-center bg-primary hover:bg-primary/90 text-primary-foreground font-semibold py-3.5 rounded-lg text-sm transition active:scale-[0.99]"
           >
-            QUERO GARANTIR POR R$ 9,90 →
+            Garantir meu acesso por R$ 9,90
           </a>
           <button
             onClick={() => setOpen(false)}
-            className="block w-full text-center text-muted-foreground hover:text-foreground py-3 mt-1 text-[11px] underline underline-offset-4 transition"
+            className="block w-full text-center text-muted-foreground hover:text-foreground py-3 mt-1 text-xs underline underline-offset-4 transition"
           >
             Não, vou perder essa oportunidade
           </button>
