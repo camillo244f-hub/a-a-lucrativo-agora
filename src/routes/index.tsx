@@ -41,15 +41,7 @@ function Index() {
 
           {/* Vídeo */}
           <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-glow border border-border bg-card animate-float-up">
-            <div className="aspect-video">
-              <iframe
-                src={VSL_URL}
-                title="Vídeo de apresentação Açaí na Garrafa"
-                allow="autoplay; encrypted-media"
-                allowFullScreen
-                className="w-full h-full"
-              />
-            </div>
+            <VSLPlayer />
           </div>
 
           {/* CTA abaixo do vídeo */}
