@@ -32,18 +32,16 @@ export function ProvasSociais() {
   }, [emblaApi]);
 
   return (
-    <section className="py-20 px-4 bg-gradient-purple/30 relative overflow-hidden">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,oklch(0.55_0.22_305/0.3),transparent_60%)]" />
-      <div className="relative mx-auto max-w-6xl">
-        <div className="text-center mb-10">
-          <span className="inline-block px-4 py-1.5 rounded-full bg-success/20 text-success text-xs font-bold uppercase tracking-widest mb-4">
+    <section className="py-14 sm:py-20 px-4">
+      <div className="mx-auto max-w-6xl">
+        <div className="text-center mb-8 sm:mb-10">
+          <p className="text-success text-[11px] sm:text-xs font-bold uppercase tracking-widest mb-3">
             Resultados reais
-          </span>
-          <h2 className="text-4xl md:text-5xl mb-3">
-            Veja quem já está <span className="text-gradient-gold">lucrando</span>
-            <br />com Açaí na Garrafa
+          </p>
+          <h2 className="text-2xl sm:text-4xl md:text-5xl mb-3 font-display">
+            Quem já está <span className="text-gradient-gold">lucrando</span>
           </h2>
-          <p className="text-muted-foreground text-lg">
+          <p className="text-muted-foreground text-sm sm:text-base">
             Prints reais da nossa comunidade de alunos
           </p>
         </div>

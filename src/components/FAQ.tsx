@@ -31,15 +31,15 @@ const FAQS = [
 export function FAQ() {
   const [open, setOpen] = useState<number | null>(0);
   return (
-    <section className="py-20 px-4">
-      <div className="mx-auto max-w-3xl">
-        <h2 className="text-center text-4xl md:text-5xl mb-3">
+    <section className="py-14 sm:py-20 px-4">
+      <div className="mx-auto max-w-2xl">
+        <h2 className="text-center text-2xl sm:text-4xl md:text-5xl mb-3 font-display">
           Perguntas <span className="text-gradient-gold">frequentes</span>
         </h2>
-        <p className="text-center text-muted-foreground mb-10">
+        <p className="text-center text-muted-foreground text-sm sm:text-base mb-8 sm:mb-10">
           Tire suas dúvidas antes de começar
         </p>
-        <div className="space-y-3">
+        <div className="space-y-2.5">
           {FAQS.map((item, i) => (
             <div
               key={i}
