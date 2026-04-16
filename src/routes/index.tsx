@@ -1,6 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Check, ShieldCheck, Zap, TrendingUp, Clock, DollarSign, X } from "lucide-react";
-import heroImg from "@/assets/acai-hero.jpg";
 import { ProvasSociais } from "@/components/ProvasSociais";
 import { Planos, LINK_BASIC, LINK_FULL } from "@/components/Planos";
 import { FAQ } from "@/components/FAQ";
