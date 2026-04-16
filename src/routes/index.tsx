@@ -84,45 +84,6 @@ function Index() {
         </div>
       </section>
 
-      {/* VSL */}
-      <section className="py-16 md:py-20 px-4">
-        <div className="mx-auto max-w-4xl">
-          <div className="text-center mb-8">
-            <span className="inline-block px-4 py-1.5 rounded-full bg-primary/20 text-primary-foreground text-xs font-bold uppercase tracking-widest mb-4">
-              Assista antes de decidir
-            </span>
-            <h2 className="text-3xl md:text-5xl mb-3">
-              Veja como funciona o <span className="text-gradient-gold">método</span>
-            </h2>
-            <p className="text-muted-foreground">Em poucos minutos você entende tudo.</p>
-          </div>
-
-          <div className="relative rounded-3xl overflow-hidden shadow-glow border border-border bg-card">
-            <div className="aspect-video">
-              <iframe
-                src={VSL_URL}
-                title="Vídeo de apresentação Açaí na Garrafa"
-                allow="autoplay; encrypted-media"
-                allowFullScreen
-                className="w-full h-full"
-              />
-            </div>
-          </div>
-
-          <div className="text-center mt-10">
-            <a
-              href={LINK_BASIC}
-              className="inline-block bg-gradient-cta text-success-foreground font-black py-5 px-8 sm:px-12 rounded-2xl text-lg md:text-xl shadow-cta animate-pulse-cta hover:scale-[1.02] transition"
-            >
-              GARANTIR MINHA VAGA POR R$ 9,90
-            </a>
-            <p className="mt-3 text-sm text-muted-foreground">
-              Comece hoje mesmo e dê o primeiro passo para sua renda diária
-            </p>
-          </div>
-        </div>
-      </section>
-
       <ProvasSociais />
 
       <Planos />
