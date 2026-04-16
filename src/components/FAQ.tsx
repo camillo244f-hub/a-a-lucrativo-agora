@@ -43,21 +43,21 @@ export function FAQ() {
           {FAQS.map((item, i) => (
             <div
               key={i}
-              className="rounded-2xl bg-card border border-border overflow-hidden shadow-card"
+              className="rounded-xl bg-card border border-border overflow-hidden"
             >
               <button
                 onClick={() => setOpen(open === i ? null : i)}
-                className="w-full flex items-center justify-between gap-4 px-6 py-5 text-left font-semibold text-base md:text-lg hover:bg-muted/40 transition-colors"
+                className="w-full flex items-center justify-between gap-4 px-5 sm:px-6 py-4 text-left font-semibold text-sm sm:text-base hover:bg-muted/40 transition-colors"
               >
                 <span>{item.q}</span>
                 <ChevronDown
-                  className={`h-5 w-5 shrink-0 transition-transform ${
-                    open === i ? "rotate-180 text-success" : "text-muted-foreground"
+                  className={`h-4 w-4 shrink-0 transition-transform ${
+                    open === i ? "rotate-180 text-foreground" : "text-muted-foreground"
                   }`}
                 />
               </button>
               {open === i && (
-                <div className="px-6 pb-5 text-muted-foreground leading-relaxed">
+                <div className="px-5 sm:px-6 pb-5 text-sm text-muted-foreground leading-relaxed">
                   {item.a}
                 </div>
               )}
